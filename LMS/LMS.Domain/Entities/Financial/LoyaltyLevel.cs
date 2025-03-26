@@ -12,6 +12,9 @@ namespace LMS.Domain.Entities.Financial
         public decimal DiscountPercentage { get; set; }
         public string LevelDescription { get; set; } = string.Empty;
 
+        //soft delete: 
+        public bool IsActive { get; set; }
+
         //Timestamp:
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }

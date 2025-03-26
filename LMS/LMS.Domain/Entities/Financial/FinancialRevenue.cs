@@ -1,4 +1,5 @@
-﻿using LMS.Domain.Enums.Finacial;
+﻿using LMS.Domain.Entities.Users;
+using LMS.Domain.Enums.Finacial;
 using LMS.Domain.Enums.Orders;
 
 namespace LMS.Domain.Entities.Financial
@@ -25,5 +26,9 @@ namespace LMS.Domain.Entities.Financial
         //Timestamp:
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
+
+        //Navigation Property: 
+        public Customer Customer { get; set; } = new Customer();
+        public Employee Employee { get; set; } = new Employee();
     }
 }

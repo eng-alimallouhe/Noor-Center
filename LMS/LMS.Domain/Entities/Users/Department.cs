@@ -1,4 +1,6 @@
-﻿namespace LMS.Domain.Entities.Users
+﻿using LMS.Domain.Entities.Orders;
+
+namespace LMS.Domain.Entities.Users
 {
     public class Department
     {
@@ -17,6 +19,7 @@
 
         //navigation property:
         public ICollection<EmployeeDepartment> EmployeeDepartments { get; set; } = [];
+        public ICollection<Order> Orders { get; set; } = [];
 
     }
 }

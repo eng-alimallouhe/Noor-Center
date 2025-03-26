@@ -5,8 +5,12 @@
         //primary key: 
         public int PaymentId { get; set; }
 
+        public DateTime Date { get; set; }
         public decimal Amount { get; set; }
         public string Reasone { get; set; } = string.Empty;
         public string Details { get; set; } = string.Empty;
+
+        //soft delete: 
+        public bool IsActive { get; set; }
     }
 }

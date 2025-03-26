@@ -30,5 +30,7 @@ namespace LMS.Domain.Entities.Users
 
         //Navigation Property:
         public Role Role { get; set; } = new Role();
+
+        public ICollection<Notification> Notifications { get; set; } = [];
     }
 }

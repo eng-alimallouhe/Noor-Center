@@ -2,7 +2,7 @@
 
 namespace LMS.Domain.Entities.Orders
 {
-    public class RentalOrder
+    public class RentalOrder : Order
     {
         //Foreign Key: BookId ==> one(Book)-to-many(RentalOrder) relationship
         public int BookId { get; set; }
