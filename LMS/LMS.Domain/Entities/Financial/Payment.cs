@@ -11,6 +11,6 @@
         public string Details { get; set; } = string.Empty;
 
         //soft delete: 
-        public bool IsActive { get; set; }
+        public bool IsActive { get; set; } = true;
     }
 }

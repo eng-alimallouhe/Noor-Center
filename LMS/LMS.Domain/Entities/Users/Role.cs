@@ -8,10 +8,10 @@
         public string RoleType { get; set; } = string.Empty;
 
         //Soft Delete:
-        public bool IsActive { get; set; }
+        public bool IsActive { get; set; } = true;
 
         //Timestamp:
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
     }
 }

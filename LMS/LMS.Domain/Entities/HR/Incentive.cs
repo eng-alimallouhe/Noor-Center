@@ -17,7 +17,7 @@ namespace LMS.Domain.Entities.HR
         public bool IsDisbursed { get; set; }
 
         //Soft Delete
-        public bool IsActive { get; set; }
+        public bool IsActive { get; set; } = true;
 
         //Navigation Property:
         public Employee Employee { get; set; } = new Employee();

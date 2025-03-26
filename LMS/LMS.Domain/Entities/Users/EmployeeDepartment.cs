@@ -14,11 +14,11 @@
         public string AppointmentDecisionUrl { get; set; } = string.Empty;
 
         //Soft Delete:
-        public bool IsActive { get; set; }
+        public bool IsActive { get; set; } = true;
 
         //Timestamp:
-        public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
+        public DateTime StartDate { get; set; } = DateTime.UtcNow;
+        public DateTime? EndDate { get; set; } = DateTime.UtcNow;
 
         //Navigation Property:
         public Employee Employee { get; set; } = new Employee();

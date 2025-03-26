@@ -4,8 +4,8 @@ namespace LMS.Domain.Interfaces
 {
     public interface IRepository<TEntity>
     {
-        Task<ICollection<TEntity>> GettAllAsync();
-
+        Task<ICollection<TEntity>> GettAllAsync(ISpecification<TEntity> specification);
+        Task<TEntity?> GetBySpecificationAsync(ISpecification<TEntity> specification);
         Task<TEntity?> GetByIdAsync(int id);
 
         Task<TEntity> AddAsync(TEntity entity);
@@ -13,8 +13,5 @@ namespace LMS.Domain.Interfaces
         Task UpdateAsync(TEntity entity);
 
         Task DeleteAsync(int id);
-
-        Task<ICollection<TEntity>> GetAllByExpressionAsync(Expression<Func<TEntity, bool>> expression);
-        Task<TEntity?> GetByExpressionAsync(Expression<Func<TEntity, bool>> expression);
     }
 }

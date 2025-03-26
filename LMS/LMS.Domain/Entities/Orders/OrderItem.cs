@@ -19,7 +19,7 @@ namespace LMS.Domain.Entities.Orders
         public decimal TotalPrice { get; set; }
 
         //Soft Delete:
-        public bool IsActive { get; set; }
+        public bool IsActive { get; set; } = true;
 
         //Timestamp:
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
