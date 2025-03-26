@@ -1,5 +1,5 @@
-﻿using BrightCenter.Infrastructure.Configurations.EmployeesManagement;
-using BrightCenter.Infrastructure.Configurations.UsersManagement;
+﻿using LMS.Infrastructure.Configurations.EmployeesManagement;
+using LMS.Infrastructure.Configurations.UsersManagement;
 using LMS.Domain.Entities.Financial;
 using LMS.Domain.Entities.HR;
 using LMS.Domain.Entities.Orders;
@@ -12,7 +12,7 @@ using LMS.Infrastructure.Configurations.Stock;
 using LMS.Infrastructure.Configurations.Users;
 using Microsoft.EntityFrameworkCore;
 
-namespace BrightCenter.Infrastructure.DbContexts
+namespace LMS.Infrastructure.DbContexts
 {
     public class AppDbContext : DbContext
     {

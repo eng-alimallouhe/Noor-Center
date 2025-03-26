@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace BrightCenter.Infrastructure.Configurations.EmployeesManagement
+namespace LMS.Infrastructure.Configurations.EmployeesManagement
 {
     public class IncentiveConfigurations :
         IEntityTypeConfiguration<Incentive>

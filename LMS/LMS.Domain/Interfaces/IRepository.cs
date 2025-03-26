@@ -1,6 +1,4 @@
-﻿using System.Linq.Expressions;
-
-namespace LMS.Domain.Interfaces
+﻿namespace LMS.Domain.Interfaces
 {
     public interface IRepository<TEntity>
     {

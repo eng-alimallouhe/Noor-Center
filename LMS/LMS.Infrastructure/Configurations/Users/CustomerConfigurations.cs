@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace BrightCenter.Infrastructure.Configurations.UsersManagement
+namespace LMS.Infrastructure.Configurations.UsersManagement
 {
     public class CustomerConfigurations :
         IEntityTypeConfiguration<Customer>

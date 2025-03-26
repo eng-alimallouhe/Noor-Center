@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 
 namespace LMS.Infrastructure.Specifications
 {
-    public abstract class Specification<TEntity> : ISpecification<TEntity>
+    public class Specification<TEntity> : ISpecification<TEntity>
     {
         public Specification(
             Expression<Func<TEntity, bool>>? criteria = null,

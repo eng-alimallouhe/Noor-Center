@@ -1,8 +1,7 @@
-﻿using BrightCenter.Infrastructure.DbContexts;
-using LMS.Domain.Interfaces;
+﻿using LMS.Domain.Interfaces;
+using LMS.Infrastructure.DbContexts;
 using LMS.Infrastructure.Specifications;
 using Microsoft.EntityFrameworkCore;
-using System.Linq.Expressions;
 
 namespace LMS.Infrastructure.Repositories
 {
@@ -36,8 +35,8 @@ namespace LMS.Infrastructure.Repositories
 
         public async Task UpdateAsync(TEntity entity)
         {
-            _dbSet.Update(entity);
-            await SaveChangesAsync();
+                _dbSet.Update(entity);
+                await SaveChangesAsync();
         }
         public async Task<TEntity> AddAsync(TEntity entity)
         {
