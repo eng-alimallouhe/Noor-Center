@@ -10,11 +10,11 @@ namespace LMS.Domain.Entities.Orders
         //Foreign Key: CustomerId ==> one(Cart)-to-one(Customer) relationship
         public int CustomerId { get; set; }
 
-        public bool IsCheckedOut { get; set; }
+        public bool IsCheckedOut { get; set; } = true;
 
         //Timestamp:
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
         // Navigation property:
         public Customer Customer { get; set; } = new Customer();

@@ -21,11 +21,11 @@ namespace LMS.Domain.Entities.Financial
         public Service Service { get; set; }
         
         //Soft Delete:
-        public bool IsActive { get; set; }
+        public bool IsActive { get; set; } = true;
 
         //Timestamp:
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
         //Navigation Property: 
         public Customer Customer { get; set; } = new Customer();

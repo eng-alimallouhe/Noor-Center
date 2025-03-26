@@ -18,8 +18,8 @@ namespace LMS.Domain.Entities.Orders
         public decimal TotalPrice { get; set; }
 
         //Timestamp:
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
         // Navigation property:
         public Cart Cart { get; set; } = new Cart();
