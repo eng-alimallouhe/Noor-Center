@@ -26,7 +26,7 @@ namespace LMS.Domain.Entities.Orders
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
         // Navigation property:
-        public SellOrder SellOrder { get; set; } = new SellOrder();
-        public Product Product { get; set; } = new Product();
+        public SellOrder SellOrder { get; set; } = null!;
+        public Product Product { get; set; } = null!;
     }
 }

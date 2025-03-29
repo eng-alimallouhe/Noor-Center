@@ -13,8 +13,8 @@ namespace LMS.Infrastructure.Configurations.Users
             builder.Property(x => x.OtpCodeId)
                     .ValueGeneratedOnAdd();
             
-            builder.Property(x => x.OtpCodeValue)
-                    .HasMaxLength(8)
+            builder.Property(x => x.HashedValue)
+                    .HasMaxLength(60)
                     .IsRequired();
             
             builder.Property(x => x.ExpiredAt)
@@ -27,7 +27,7 @@ namespace LMS.Infrastructure.Configurations.Users
                     .IsRequired();
             
             builder.HasOne(x => x.User)
-                    .WithOne()
+                    .WithOne(u => u.OtpCode)
                     .HasForeignKey<OtpCode>(x => x.UserId)
                     .OnDelete(DeleteBehavior.Cascade);
         }

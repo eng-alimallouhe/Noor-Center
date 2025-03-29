@@ -4,10 +4,10 @@ using LMS.Infrastructure.DbContexts;
 namespace LMS.Infrastructure.Repositories.Users
 {
 
-    public class NtofifcationRepository : BaseRepository<Address>
+    public class AddressRepository : BaseRepository<Address>
     {
         private readonly AppDbContext _context;
-        public NtofifcationRepository(AppDbContext context) : base(context)
+        public AddressRepository(AppDbContext context) : base(context)
         {
             _context = context;
         }

@@ -22,6 +22,6 @@ namespace LMS.Domain.Entities.HR
         public bool IsActive { get; set; } = true;
 
         //Navigation Property:
-        public Employee Employee { get; set; } = new Employee();
+        public Employee Employee { get; set; } = null!;
     }
 }

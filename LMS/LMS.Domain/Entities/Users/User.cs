@@ -27,10 +27,15 @@ namespace LMS.Domain.Entities.Users
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
         public DateTime LastLogIn { get; set; } = DateTime.UtcNow;
+        public DateTime? LockedUntil { get; set; }
 
         //Navigation Property:
-        public Role Role { get; set; } = new Role();
+        public Role Role { get; set; } = null!;
 
         public ICollection<Notification> Notifications { get; set; } = [];
+        
+        public OtpCode OtpCode { get; set; } = null!;
+
+        public RefreshToken RefreshToken { get; set; } = null!;
     }
 }

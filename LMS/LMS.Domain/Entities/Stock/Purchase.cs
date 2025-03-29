@@ -21,7 +21,7 @@
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
         // Navigation property:
-        public Supplier Supplier { get; set; } = new Supplier();
+        public Supplier Supplier { get; set; } = null!;
     }
 
 }

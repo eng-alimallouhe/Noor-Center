@@ -15,6 +15,6 @@
         public string RedirectUrl { get; set; } = string.Empty;
 
         // Navigation Property:
-        public User User { get; set; } = new User();
+        public User User { get; set; } = null!;
     }
 }

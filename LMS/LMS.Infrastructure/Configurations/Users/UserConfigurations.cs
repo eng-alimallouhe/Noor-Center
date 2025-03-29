@@ -53,10 +53,18 @@ namespace LMS.Infrastructure.Configurations.Users
             builder.Property(u => u.UpdatedAt)
                     .IsRequired();
 
+            builder.Property(u => u.LockedUntil)
+                    .IsRequired(false);
+
             builder.HasOne(u => u.Role)
                     .WithMany()
                     .HasForeignKey(u => u.RoleId)
                     .IsRequired();
+
+            builder.HasOne(u => u.RefreshToken)
+                    .WithOne(rt => rt.User)
+                    .HasForeignKey<RefreshToken>(rt => rt.UserId)
+                    .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

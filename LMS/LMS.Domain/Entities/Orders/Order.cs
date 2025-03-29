@@ -31,9 +31,9 @@ namespace LMS.Domain.Entities.Orders
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
         //nabigation property:
-        public Customer Customer { get; set; } = new Customer();
-        public Employee Employee { get; set; } = new Employee();
-        public Department Department { get; set; } = new Department();
+        public Customer Customer { get; set; } = null!;
+        public Employee Employee { get; set; } = null!;
+        public Department Department { get; set; } = null!;
 
 
     }

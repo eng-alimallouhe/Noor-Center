@@ -19,7 +19,7 @@ namespace LMS.Infrastructure.Configurations.Users
                     .HasMaxLength(60);
             
             builder.Property(r => r.IsActive)
-                    .HasDefaultValueSql("1");
+                    .IsRequired();
 
             builder.Property(r => r.CreatedAt)
                     .IsRequired();

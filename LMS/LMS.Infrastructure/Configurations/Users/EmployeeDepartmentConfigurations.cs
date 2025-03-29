@@ -18,6 +18,13 @@ namespace LMS.Infrastructure.Configurations.Users
                     .IsRequired()
                     .HasMaxLength(255);
 
+            builder.Property(ed => ed.DepartmentId)
+                    .HasColumnType("int")
+                    .IsRequired();
+
+            builder.Property(ed => ed.EmployeeId)
+                    .HasColumnType("int")
+                    .IsRequired();
 
             builder.Property(ed => ed.StartDate)
                     .IsRequired();
@@ -29,12 +36,12 @@ namespace LMS.Infrastructure.Configurations.Users
                     .IsRequired();
 
             builder.HasOne(ed => ed.Employee)
-                    .WithMany()
+                    .WithMany(e => e.EmployeeDepartments)
                     .HasForeignKey(ed => ed.EmployeeId)
                     .IsRequired();
 
             builder.HasOne(ed => ed.Department)
-                    .WithMany()
+                    .WithMany(d => d.EmployeeDepartments)
                     .HasForeignKey(ed => ed.DepartmentId)
                     .IsRequired();
         }

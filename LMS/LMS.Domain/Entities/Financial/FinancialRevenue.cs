@@ -28,7 +28,7 @@ namespace LMS.Domain.Entities.Financial
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
         //Navigation Property: 
-        public Customer Customer { get; set; } = new Customer();
-        public Employee Employee { get; set; } = new Employee();
+        public Customer Customer { get; set; } = null!;
+        public Employee Employee { get; set; } = null!;
     }
 }

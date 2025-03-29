@@ -18,7 +18,7 @@
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
         // Navigation property:
-        public Product Product { get; set; } = new Product();
+        public Product Product { get; set; } = null!;
     }
 
 }

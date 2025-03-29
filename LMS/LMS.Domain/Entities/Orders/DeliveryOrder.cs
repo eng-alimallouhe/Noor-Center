@@ -9,6 +9,6 @@ namespace LMS.Domain.Entities.Orders
 
         public string CustomerName { get; set; } = string.Empty;
         public string DepartmentName { get; set; } = string.Empty;
-        public Address Address { get; set; } = new Address();
+        public Address Address { get; set; } = null!;
     }
 }

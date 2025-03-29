@@ -15,13 +15,14 @@ namespace LMS.Infrastructure.Repositories
             _context = context;
             _dbSet = context.Set<TEntity>();
         }
+        
         public async Task<ICollection<TEntity>> GettAllAsync(ISpecification<TEntity> specification)
         {
             var query = SpecificationQueryBuilder.GetQuery(_dbSet, specification);
             return await query.ToListAsync();
         }
 
-        public async Task<TEntity?> GetBySpecificationAsync(ISpecification<TEntity> specification)
+        public async Task<TEntity?> GetAsync(ISpecification<TEntity> specification)
         {
             var query = SpecificationQueryBuilder.GetQuery(_dbSet, specification);
             return await query.FirstOrDefaultAsync();
@@ -32,12 +33,6 @@ namespace LMS.Infrastructure.Repositories
             return await _dbSet.FindAsync(id);
         }
 
-
-        public async Task UpdateAsync(TEntity entity)
-        {
-                _dbSet.Update(entity);
-                await SaveChangesAsync();
-        }
         public async Task<TEntity> AddAsync(TEntity entity)
         {
             await _dbSet.AddAsync(entity);
@@ -45,7 +40,29 @@ namespace LMS.Infrastructure.Repositories
             return entity;
         }
 
+        public async Task UpdateAsync(TEntity entity)
+        {
+                _dbSet.Update(entity);
+                await SaveChangesAsync();
+        }
+       
         public abstract Task DeleteAsync(int id);
+
+        public async Task DeleteHardlyAsync(int id)
+        {
+            var entity = await _dbSet.FindAsync(id);
+
+            if (entity != null)
+            {
+                _dbSet.Remove(entity);
+                await SaveChangesAsync();
+            }
+
+            else
+            {
+                throw new KeyNotFoundException("id is uncorrect");
+            }
+        }
 
         public async Task SaveChangesAsync()
         {

@@ -17,7 +17,7 @@ namespace LMS.Domain.Entities.Orders
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
         // Navigation property:
-        public Customer Customer { get; set; } = new Customer();
+        public Customer Customer { get; set; } = null!;
         public ICollection<CartItem> CartItems { get; set; } = [];
     }
 }

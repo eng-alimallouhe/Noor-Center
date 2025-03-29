@@ -26,6 +26,7 @@ namespace LMS.Infrastructure.DbContexts
         public DbSet<Address> Addresses { get; set; }
         public DbSet<OtpCode> OtpCodes { get; set; }
         public DbSet<Notification> Notifications { get; set; }
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
 
 
         //HR Namespace
@@ -63,20 +64,9 @@ namespace LMS.Infrastructure.DbContexts
         public DbSet<FinancialRevenue> FinancialRevenues { get; set; }
 
 
-        //public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-        //{ }
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        { }
 
-        public AppDbContext()
-        {
-            
-        }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer(
-                "Server= (localdb)\\MSSQLLocalDB ;Database=MyDB;Trusted_Connection=True;TrustServerCertificate=True;");
-        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

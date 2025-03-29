@@ -11,9 +11,9 @@ namespace LMS.Domain.Entities.Users
         public decimal points { get; set; }
 
         //navigation property:
-        public LoyaltyLevel Level { get; set; } = new LoyaltyLevel();
+        public LoyaltyLevel Level { get; set; } = null!;
         public ICollection<Address> Addresses { get; set; } = [];
-        public Cart Cart { get; set; } = new Cart();
+        public Cart Cart { get; set; } = null!;
         public ICollection<Order> Orders { get; set; } = [];
         public ICollection<FinancialRevenue> FinancialRevenues { get; set; } = [];
     }

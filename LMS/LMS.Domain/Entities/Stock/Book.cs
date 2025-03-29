@@ -16,7 +16,7 @@
         //Navigation Property: many-to-many
         public ICollection<Publisher> Publishers { get; set; } = [];
 
-        public Genre Genre { get; set; } = new Genre();
-        public Author Author { get; set; } = new Author();
+        public Genre Genre { get; set; } = null!;
+        public Author Author { get; set; } = null!;
     }
 }

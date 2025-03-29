@@ -21,7 +21,7 @@
         public DateTime? EndDate { get; set; } = DateTime.UtcNow;
 
         //Navigation Property:
-        public Employee Employee { get; set; } = new Employee();
-        public Department Department { get; set; } = new Department();
+        public Employee Employee { get; set; } = null!;
+        public Department Department { get; set; } = null!;
     }
 }

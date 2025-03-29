@@ -8,7 +8,7 @@
         //foreign Key: UserId ==> one(user) to one(OtpCode) relationship
         public int UserId { get; set; }
         
-        public string OtpCodeValue { get; set; } = string.Empty;
+        public string HashedValue { get; set; } = string.Empty;
         public bool IsUsed { get; set; } = false;
         public int FailedAttempts { get; set; }
 
@@ -17,6 +17,6 @@
         public DateTime ExpiredAt { get; set; } = DateTime.Now.AddMinutes(10);
         
         //navigation property:
-        public User User { get; set; } = new User();
+        public User User { get; set; } = null!;
     }
 }

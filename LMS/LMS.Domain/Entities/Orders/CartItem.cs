@@ -22,7 +22,7 @@ namespace LMS.Domain.Entities.Orders
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
         // Navigation property:
-        public Cart Cart { get; set; } = new Cart();
-        public Product Product { get; set; } = new Product();
+        public Cart Cart { get; set; } =    null!;
+        public Product Product { get; set; } = null!    ;
     }
 }

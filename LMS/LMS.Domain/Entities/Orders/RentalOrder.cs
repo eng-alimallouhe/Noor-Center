@@ -13,6 +13,6 @@ namespace LMS.Domain.Entities.Orders
         public decimal LateCost { get; set; } = 0.0m;
 
         //navigation property: 
-        public Book Book { get; set; } = new Book();
+        public Book Book { get; set; } = null!;
     }
 }

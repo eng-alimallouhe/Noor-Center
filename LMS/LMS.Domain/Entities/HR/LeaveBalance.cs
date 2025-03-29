@@ -16,6 +16,6 @@ namespace LMS.Domain.Entities.HR
         public int Year { get; set; }
 
         //Navigation Property:
-        public Employee Employee { get; set; } = new Employee();
+        public Employee Employee { get; set; } = null!;
     }
 }
